@@ -775,7 +775,7 @@ class RolesComponent {
             name: ['', Validators.required],
             defaultpageid: ['', Validators.required],
             parentid: [2],
-            policyGroupId: ['', Validators.required],
+            policyGroupId: [{ value: '', disabled: false }, Validators.required],
             dossierid: []
         });
     }
@@ -827,7 +827,10 @@ class RolesComponent {
             this.enableButton = this.isAnyFormControlWithValue();
         });
         console.log("on Click Add Role - step 2");
-        this.roleForm.get('policyGroupId').enable();
+        const policyGroupControl = this.roleForm.get('policyGroupId');
+        console.log("policyGroupId control before enable:", policyGroupControl.disabled);
+        policyGroupControl.enable();
+        console.log("policyGroupId control after enable:", policyGroupControl.disabled);
         this.permissionAllow = false;
         this.permissions = [];
         this.filterPermissions = [];
