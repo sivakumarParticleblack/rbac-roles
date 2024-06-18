@@ -58,7 +58,7 @@ export declare class RolesComponent implements OnInit {
     childMenuList: any;
     showChildren: boolean;
     parentMenulist: TreeNode[];
-    selectedFile: TreeNode;
+    selectedFile: TreeNode<any> | TreeNode<any>[];
     httpService: any;
     validationErrors: {
         [key: string]: string;
