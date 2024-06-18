@@ -760,7 +760,7 @@ class RolesComponent {
             name: ['', Validators.required],
             defaultpageid: ['', Validators.required],
             dossierid: [''],
-            policyGroupId: [{ value: '', disabled: true }, Validators.required] // Initialize with disabled
+            policyGroupId: [{ value: '', disabled: false }, Validators.required]
         });
     }
     isAnyFormControlWithValue() {
@@ -778,11 +778,7 @@ class RolesComponent {
     }
     initializeform() {
         this.roleForm = this.formBuilder.group({
-            name: ['', Validators.required],
-            defaultpageid: ['', Validators.required],
-            parentid: [2],
-            policyGroupId: [{ value: '', disabled: false }, Validators.required],
-            dossierid: []
+            policyGroupId: [{ enabled: true }, Validators.required],
         });
     }
     get formValidate() {
@@ -851,7 +847,7 @@ class RolesComponent {
         this.firstTab = true;
         this.validationErrors = {};
         this.policyGroupsLength = 0;
-        this.roleForm.get('policyGroupId').enable();
+        this.roleForm.get('policyGroupId').enabled;
     }
     searchRole(event) {
         const value = event.target.value.toLowerCase();
