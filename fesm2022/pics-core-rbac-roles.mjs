@@ -821,7 +821,7 @@ class RolesComponent {
         console.log('on click add role : ');
         this.enableButton = false;
         this.filterPermissions = [];
-        this.policyGroupList = [];
+        //this.policyGroupList = [];
         this.roleForm.reset();
         this.formSubmit = false;
         this.initializeform();
@@ -842,7 +842,7 @@ class RolesComponent {
         this.firstTab = true;
         this.validationErrors = {};
         this.policyGroupsLength = 0;
-        this.getPolicyGroupList();
+        //this.getPolicyGroupList();
     }
     searchRole(event) {
         const value = event.target.value.toLowerCase();
