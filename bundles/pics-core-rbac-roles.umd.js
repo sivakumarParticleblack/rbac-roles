@@ -1211,7 +1211,7 @@
                 name: ['', i1$1.Validators.required],
                 defaultpageid: ['', i1$1.Validators.required],
                 parentid: [2],
-                policyGroupId: ['', i1$1.Validators.required],
+                policyGroupId: [{ value: '', disabled: false }, i1$1.Validators.required],
                 dossierid: []
             });
         };
@@ -1266,6 +1266,7 @@
             this.roleForm.reset();
             this.formSubmit = false;
             this.initializeform();
+            console.log('on Click Add Role : ');
             this.roleForm.get('policyGroupId').enable();
             this.roleForm.valueChanges.subscribe(function () {
                 _this.enableButton = _this.isAnyFormControlWithValue();

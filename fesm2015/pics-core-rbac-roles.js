@@ -695,7 +695,7 @@ class RolesComponent {
             name: ['', Validators.required],
             defaultpageid: ['', Validators.required],
             parentid: [2],
-            policyGroupId: ['', Validators.required],
+            policyGroupId: [{ value: '', disabled: false }, Validators.required],
             dossierid: []
         });
     }
@@ -742,6 +742,7 @@ class RolesComponent {
         this.roleForm.reset();
         this.formSubmit = false;
         this.initializeform();
+        console.log('on Click Add Role : ');
         this.roleForm.get('policyGroupId').enable();
         this.roleForm.valueChanges.subscribe(() => {
             this.enableButton = this.isAnyFormControlWithValue();
