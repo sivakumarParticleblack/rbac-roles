@@ -842,6 +842,7 @@ class RolesComponent {
         this.firstTab = true;
         this.validationErrors = {};
         this.policyGroupsLength = 0;
+        this.getPolicyGroupList();
     }
     searchRole(event) {
         const value = event.target.value.toLowerCase();
