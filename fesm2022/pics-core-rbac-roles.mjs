@@ -759,7 +759,7 @@ class RolesComponent {
             console.log('on Init - enable button - after assign : ', this.enableButton);
         });
         this.roleForm = this.formBuilder.group({
-            policyGroupId: [{ value: '', enabled: true }, Validators.required]
+            policyGroupId: [{ enabled: true }, Validators.required]
         });
     }
     isAnyFormControlWithValue() {
