@@ -76,7 +76,7 @@ export declare class RolesComponent implements OnInit {
     ngOnDestroy(): void;
     initializeform(): void;
     get formValidate(): {
-        [key: string]: import("@angular/forms").AbstractControl;
+        [key: string]: import("@angular/forms").AbstractControl<any, any>;
     };
     onInput(event: Event, fieldtype: any, label: any, required: boolean): void;
     getLandingPage(): void;
@@ -121,5 +121,5 @@ export declare class RolesComponent implements OnInit {
     nodeDrop(event: any): void;
     selectPolicyGroup(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<RolesComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<RolesComponent, "roles", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<RolesComponent, "roles", never, {}, {}, never, never, false, never>;
 }

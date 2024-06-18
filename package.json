@@ -1,6 +1,6 @@
 {
   "name": "@pics-core/rbac-roles",
-  "version": "1.0.3-OR.48",
+  "version": "1.0.3-OR.47",
   "description": "This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.",
   "directories": {
     "lib": "lib"
@@ -23,17 +23,25 @@
     "tslib": "^2.3.0"
   },
   "main": "bundles/pics-core-rbac-roles.umd.js",
-  "module": "fesm2015/pics-core-rbac-roles.js",
+  "module": "fesm2022/pics-core-rbac-roles.mjs",
   "es2022": "fesm2022/pics-core-rbac-roles.js",
   "esm2022": "esm2022/pics-core-rbac-roles.js",
   "fesm2022": "fesm2022/pics-core-rbac-roles.js",
-  "typings": "pics-core-rbac-roles.d.ts",
+  "typings": "index.d.ts",
   "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "z"
   },
-  "es2015": "fesm2015/pics-core-rbac-roles.js",
-  "esm2015": "esm2015/pics-core-rbac-roles.js",
-  "fesm2015": "fesm2015/pics-core-rbac-roles.js"
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2022": "./esm2022/pics-core-rbac-roles.mjs",
+      "esm": "./esm2022/pics-core-rbac-roles.mjs",
+      "default": "./fesm2022/pics-core-rbac-roles.mjs"
+    }
+  }
 }

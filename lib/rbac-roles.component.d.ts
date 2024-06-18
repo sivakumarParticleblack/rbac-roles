@@ -14,5 +14,5 @@ export declare class RbacRolesComponent implements OnInit {
     constructor(permissionStore: PermissionStore, _storeservice: DataStoreService);
     ngOnInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<RbacRolesComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<RbacRolesComponent, "rbac-roles", never, { "RBACORG": "RBACORG"; "PERMISSION": "PERMISSION"; "roleEvent": "roleEvent"; "INPUTVALIDATIONMETHOD": "INPUTVALIDATIONMETHOD"; }, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<RbacRolesComponent, "rbac-roles", never, { "RBACORG": { "alias": "RBACORG"; "required": false; }; "PERMISSION": { "alias": "PERMISSION"; "required": false; }; "roleEvent": { "alias": "roleEvent"; "required": false; }; "INPUTVALIDATIONMETHOD": { "alias": "INPUTVALIDATIONMETHOD"; "required": false; }; }, {}, never, never, false, never>;
 }
