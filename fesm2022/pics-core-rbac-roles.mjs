@@ -826,6 +826,7 @@ class RolesComponent {
         this.roleForm.valueChanges.subscribe(() => {
             this.enableButton = this.isAnyFormControlWithValue();
         });
+        console.log("on Click Add Role - step 2");
         this.roleForm.get('policyGroupId').enable();
         this.permissionAllow = false;
         this.permissions = [];
