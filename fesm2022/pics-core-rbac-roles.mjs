@@ -835,7 +835,7 @@ class RolesComponent {
         setTimeout(() => {
             policyGroupControl.enable();
             console.log("policyGroupId control after enable:", policyGroupControl.disabled);
-            console.log("policyGroupId control after enable - step 1 :", policyGroupControl.enabled);
+            console.log("policyGroupId control after enable - step 1 :", policyGroupControl.enable());
         }, 0);
         policyGroupControl.enable();
         this.permissionAllow = false;
