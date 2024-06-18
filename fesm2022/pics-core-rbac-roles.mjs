@@ -754,12 +754,7 @@ class RolesComponent {
         this.getLandingPage();
         this.getTabs();
         this.roleForm.valueChanges.subscribe(() => {
-            console.log('on Init - enable button - before assign : ', this.enableButton);
             this.enableButton = this.isAnyFormControlWithValue();
-            console.log('on Init - enable button - after assign : ', this.enableButton);
-        });
-        this.roleForm = this.formBuilder.group({
-            policyGroupId: [{ enabled: true }, Validators.required]
         });
     }
     isAnyFormControlWithValue() {
@@ -777,7 +772,11 @@ class RolesComponent {
     }
     initializeform() {
         this.roleForm = this.formBuilder.group({
-            policyGroupId: [{ enabled: true }, Validators.required],
+            name: ['', Validators.required],
+            defaultpageid: ['', Validators.required],
+            parentid: [2],
+            policyGroupId: ['', Validators.required],
+            dossierid: []
         });
     }
     get formValidate() {
@@ -819,28 +818,13 @@ class RolesComponent {
         }
     }
     onClickAddRole() {
-        console.log("Starting onClickAddRole()");
-        console.log("Step 1: Resetting form and initializing");
-        console.log('Enable button - step 1 : ', this.enableButton);
         this.enableButton = false;
         this.roleForm.reset();
         this.formSubmit = false;
         this.initializeform();
         this.roleForm.valueChanges.subscribe(() => {
             this.enableButton = this.isAnyFormControlWithValue();
-            console.log('Enable button : ', this.enableButton);
         });
-        console.log("on Click Add Role - step 2");
-        const policyGroupControl = this.roleForm.get('policyGroupId');
-        console.log("policyGroupId control before enable:", policyGroupControl.disabled);
-        console.log("policyGroupId control before enable - step 2:", policyGroupControl.enabled);
-        // Add a timeout to force re-evaluation
-        setTimeout(() => {
-            policyGroupControl.enable();
-            console.log("policyGroupId control after enable:", policyGroupControl.disabled);
-            console.log("policyGroupId control after enable - step 1 :", policyGroupControl.enable());
-        }, 0);
-        policyGroupControl.enable();
         this.permissionAllow = false;
         this.permissions = [];
         this.filterPermissions = [];
