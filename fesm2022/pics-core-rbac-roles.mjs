@@ -756,6 +756,12 @@ class RolesComponent {
         this.roleForm.valueChanges.subscribe(() => {
             this.enableButton = this.isAnyFormControlWithValue();
         });
+        this.roleForm = this.formBuilder.group({
+            name: ['', Validators.required],
+            defaultpageid: ['', Validators.required],
+            dossierid: [''],
+            policyGroupId: [{ value: '', disabled: true }, Validators.required] // Initialize with disabled
+        });
     }
     isAnyFormControlWithValue() {
         const formValue = this.roleForm.value;
