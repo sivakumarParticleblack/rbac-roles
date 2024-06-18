@@ -820,6 +820,8 @@ class RolesComponent {
     onClickAddRole() {
         console.log('on click add role : ');
         this.enableButton = false;
+        this.filterPermissions = [];
+        this.policyGroupList = [];
         this.roleForm.reset();
         this.formSubmit = false;
         this.initializeform();
