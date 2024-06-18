@@ -829,8 +829,11 @@ class RolesComponent {
         console.log("on Click Add Role - step 2");
         const policyGroupControl = this.roleForm.get('policyGroupId');
         console.log("policyGroupId control before enable:", policyGroupControl.disabled);
-        policyGroupControl.enable();
-        console.log("policyGroupId control after enable:", policyGroupControl.disabled);
+        // Add a timeout to force re-evaluation
+        setTimeout(() => {
+            policyGroupControl.enable();
+            console.log("policyGroupId control after enable:", policyGroupControl.disabled);
+        }, 0);
         this.permissionAllow = false;
         this.permissions = [];
         this.filterPermissions = [];
