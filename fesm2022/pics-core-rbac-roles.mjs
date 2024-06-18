@@ -837,6 +837,7 @@ class RolesComponent {
             console.log("policyGroupId control after enable:", policyGroupControl.disabled);
             console.log("policyGroupId control after enable - step 1 :", policyGroupControl.enabled);
         }, 0);
+        policyGroupControl.enable();
         this.permissionAllow = false;
         this.permissions = [];
         this.filterPermissions = [];
