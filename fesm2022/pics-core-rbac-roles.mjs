@@ -824,7 +824,7 @@ class RolesComponent {
         //this.policyGroupList = [];
         this.roleForm.reset();
         //this.formSubmit = false;
-        this.initializeform();
+        //this.initializeform();
         const isPolicyGroupEnabled = this.roleForm.get('policyGroupId').enabled;
         console.log('Policy Group Dropdown Enabled Status - step 1 :', isPolicyGroupEnabled);
         //  this.roleForm.get('policyGroupId').enable();
