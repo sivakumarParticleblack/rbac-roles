@@ -818,31 +818,20 @@ class RolesComponent {
         }
     }
     onClickAddRole() {
-        console.log('on click add role : ');
         this.enableButton = false;
-        //this.filterPermissions = [];
-        //this.policyGroupList = [];
         this.roleForm.reset();
-        //this.formSubmit = false;
+        this.formSubmit = false;
         //this.initializeform();
-        const isPolicyGroupEnabled = this.roleForm.get('policyGroupId').enabled;
-        console.log('Policy Group Dropdown Enabled Status - step 1 :', isPolicyGroupEnabled);
-        //  this.roleForm.get('policyGroupId').enable();
-        const isPolicyGroupEnabled1 = this.roleForm.get('policyGroupId').enabled;
-        console.log('Policy Group Dropdown Enabled Status - step 2 :', isPolicyGroupEnabled1);
-        // this.roleForm.valueChanges.subscribe(() => {
-        //   console.log('enable button status before assign : ',this.enableButton);
-        //   this.enableButton = this.isAnyFormControlWithValue();
-        //   console.log('enable button status after assign : ',this.enableButton);
-        // });
-        // this.permissionAllow = false;
-        // this.permissions = [];
-        // this.filterPermissions = [];
-        // this.roleId = 0;
-        // this.firstTab = true;
-        // this.validationErrors = {};
-        // this.policyGroupsLength = 0;
-        //this.getPolicyGroupList();
+        this.roleForm.valueChanges.subscribe(() => {
+            this.enableButton = this.isAnyFormControlWithValue();
+        });
+        this.permissionAllow = false;
+        this.permissions = [];
+        this.filterPermissions = [];
+        this.roleId = 0;
+        this.firstTab = true;
+        this.validationErrors = {};
+        this.policyGroupsLength = 0;
     }
     searchRole(event) {
         const value = event.target.value.toLowerCase();
