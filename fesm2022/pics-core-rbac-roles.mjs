@@ -820,14 +820,14 @@ class RolesComponent {
     onClickAddRole() {
         console.log('on click add role : ');
         this.enableButton = false;
-        this.filterPermissions = [];
+        //this.filterPermissions = [];
         //this.policyGroupList = [];
-        this.roleForm.reset();
-        this.formSubmit = false;
-        this.initializeform();
+        //this.roleForm.reset();
+        //this.formSubmit = false;
+        //    this.initializeform();
         const isPolicyGroupEnabled = this.roleForm.get('policyGroupId').enabled;
         console.log('Policy Group Dropdown Enabled Status - step 1 :', isPolicyGroupEnabled);
-        this.roleForm.get('policyGroupId').enable();
+        //  this.roleForm.get('policyGroupId').enable();
         const isPolicyGroupEnabled1 = this.roleForm.get('policyGroupId').enabled;
         console.log('Policy Group Dropdown Enabled Status - step 2 :', isPolicyGroupEnabled1);
         // this.roleForm.valueChanges.subscribe(() => {
