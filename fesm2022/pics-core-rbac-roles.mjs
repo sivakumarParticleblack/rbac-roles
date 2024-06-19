@@ -821,7 +821,7 @@ class RolesComponent {
         this.enableButton = false;
         this.roleForm.reset();
         this.formSubmit = false;
-        //this.initializeform();
+        this.initializeform(); // included now for testing purpose
         this.roleForm.valueChanges.subscribe(() => {
             this.enableButton = this.isAnyFormControlWithValue();
         });
